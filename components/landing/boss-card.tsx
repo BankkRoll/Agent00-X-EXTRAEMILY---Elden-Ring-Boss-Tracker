@@ -188,14 +188,64 @@ export function BossCard({ boss, onWatchClip }: BossCardProps) {
               )}
             </div>
           ) : boss.status === "In Progress" ? (
-            <div className="py-6 text-center">
-              <div className="flex justify-center items-center gap-2 mb-3">
-                <Target className="w-5 h-5 text-amber-500 drop-shadow-sm animate-pulse" />
-                <span className="text-sm font-medium text-amber-600 dark:text-amber-400">
-                  In Progress
-                </span>
+            <div className="space-y-4">
+              {/* Status Row */}
+              <div className="bg-amber-500/5 border-amber-500/10 flex items-center gap-2 p-2 rounded-lg border shadow-sm transition-all duration-300 hover:shadow-md">
+                <Target className="w-4 h-4 shrink-0 text-amber-600 dark:text-amber-400" />
+                <div className="min-w-0 flex-1">
+                  <div className="text-muted-foreground text-xs">Status</div>
+                  <div className="text-sm font-semibold text-amber-600 dark:text-amber-400">
+                    In Progress
+                  </div>
+                </div>
               </div>
-              <p className="text-muted-foreground text-xs">Battle ongoing...</p>
+
+              {/* Stats Grid */}
+              <div className="grid grid-cols-2 gap-3">
+                {/* Levels */}
+                <div className="space-y-2">
+                  <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
+                    <Users className="w-3 h-3" />
+                    <span>Levels</span>
+                  </div>
+                  <div className="space-y-1 text-sm">
+                    <div className="flex justify-between">
+                      <span className="text-muted-foreground">Emily</span>
+                      <span className="text-primary font-medium">
+                        Lv.{boss.level_emily || 0}
+                      </span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-muted-foreground">Agent</span>
+                      <span className="text-primary font-medium">
+                        Lv.{boss.level_agent || 0}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Deaths */}
+                <div className="space-y-2">
+                  <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
+                    <Skull className="w-3 h-3" />
+                    <span>Deaths</span>
+                  </div>
+                  <div className="space-y-1 text-sm">
+                    <div className="flex justify-between">
+                      <span className="text-muted-foreground">Emily</span>
+                      <span className="text-destructive font-medium">
+                        {boss.death_count_emily || 0}
+                      </span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-muted-foreground">Agent</span>
+                      <span className="text-destructive font-medium">
+                        {boss.death_count_agent || 0}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           ) : (
             <div className="py-6 text-center">
