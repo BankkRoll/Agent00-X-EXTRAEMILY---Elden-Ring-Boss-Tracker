@@ -18,13 +18,6 @@ This is a real-time boss tracker for Emily and Agent's Elden Ring marathon. The 
 ### Agent's Overlay
 **URL:** [https://agent00-x-extraemily.vercel.app/stream/overlay/agent](https://agent00-x-extraemily.vercel.app/stream/overlay/agent)
 
-Features:
-- Real-time boss progress tracking
-- Current boss indicator (shows when Agent is fighting)
-- Death count and level statistics
-- Elden Ring themed UI with ornate design
-- Amber/gold warrior aesthetic
-
 ### Emily's Overlay
 **URL:** [https://agent00-x-extraemily.vercel.app/stream/overlay/emily](https://agent00-x-extraemily.vercel.app/stream/overlay/emily)
 
@@ -33,6 +26,14 @@ Features:
 - Current boss indicator (shows when boss battles are in progress)
 - Death count and level statistics
 - Elden Ring themed UI with ornate design
+- Amber/gold warrior aesthetic
+
+| Overlay | Preview |
+|---------|---------|
+| **Agent's Overlay** | <img width="400" alt="Agent's Overlay" src="https://github.com/user-attachments/assets/335757c4-ed72-4796-b24f-929972f22967" /> |
+| **Emily's Overlay** | <img width="400" alt="Emily's Overlay" src="https://github.com/user-attachments/assets/cf15d927-b80e-4e95-aef3-00a19b7c579f" /> |
+| **Boss Alert** | <img width="300" alt="Boss Alert" src="https://github.com/user-attachments/assets/f32fb39e-c770-47ed-a063-6069ca996590" /> |
+
 
 ## Tech Stack
 
