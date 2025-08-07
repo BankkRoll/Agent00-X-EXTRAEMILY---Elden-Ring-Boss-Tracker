@@ -64,7 +64,6 @@ export function BossCard({ boss, onWatchClip }: BossCardProps) {
       <div className="from-primary/5 to-secondary/5 via-transparent absolute inset-0 bg-gradient-to-r opacity-0 transition-opacity duration-300 pointer-events-none group-hover:opacity-100" />
 
       <CardContent className="relative z-10 p-0">
-        {/* Header */}
         <div className="border-border/30 p-4 pb-3 border-b">
           <div className="flex justify-between items-start gap-3">
             <div className="min-w-0 flex-1">
@@ -81,11 +80,9 @@ export function BossCard({ boss, onWatchClip }: BossCardProps) {
           </div>
         </div>
 
-        {/* Content */}
         <div className="p-4 pt-3">
           {boss.status === "Completed" ? (
             <div className="space-y-4">
-              {/* Duration & Stats Row */}
               <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                 {duration && (
                   <div className="bg-emerald-500/5 border-emerald-500/10 flex items-center gap-2 p-2 rounded-lg border shadow-sm transition-all duration-300 hover:shadow-md">
@@ -112,9 +109,7 @@ export function BossCard({ boss, onWatchClip }: BossCardProps) {
                 </div>
               </div>
 
-              {/* Stats Grid */}
               <div className="grid grid-cols-2 gap-3">
-                {/* Levels */}
                 <div className="space-y-2">
                   <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
                     <Users className="w-3 h-3" />
@@ -136,7 +131,6 @@ export function BossCard({ boss, onWatchClip }: BossCardProps) {
                   </div>
                 </div>
 
-                {/* Deaths */}
                 <div className="space-y-2">
                   <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
                     <Skull className="w-3 h-3" />
@@ -159,7 +153,6 @@ export function BossCard({ boss, onWatchClip }: BossCardProps) {
                 </div>
               </div>
 
-              {/* Clip Actions */}
               {boss.clip_link && (
                 <div className="flex gap-2 pt-2">
                   <Button
@@ -189,7 +182,6 @@ export function BossCard({ boss, onWatchClip }: BossCardProps) {
             </div>
           ) : boss.status === "In Progress" ? (
             <div className="space-y-4">
-              {/* Status Row */}
               <div className="bg-amber-500/5 border-amber-500/10 flex items-center gap-2 p-2 rounded-lg border shadow-sm transition-all duration-300 hover:shadow-md">
                 <Target className="w-4 h-4 shrink-0 text-amber-600 dark:text-amber-400" />
                 <div className="min-w-0 flex-1">
@@ -200,9 +192,7 @@ export function BossCard({ boss, onWatchClip }: BossCardProps) {
                 </div>
               </div>
 
-              {/* Stats Grid */}
               <div className="grid grid-cols-2 gap-3">
-                {/* Levels */}
                 <div className="space-y-2">
                   <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
                     <Users className="w-3 h-3" />
@@ -224,7 +214,6 @@ export function BossCard({ boss, onWatchClip }: BossCardProps) {
                   </div>
                 </div>
 
-                {/* Deaths */}
                 <div className="space-y-2">
                   <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
                     <Skull className="w-3 h-3" />

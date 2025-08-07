@@ -1,14 +1,14 @@
 "use client";
 
-import { Boss } from "@/lib/database.types";
-import { supabase } from "@/lib/supabase";
 import { useEffect, useState } from "react";
 
 import { BossCard } from "@/components/landing/boss-card";
 import { ClipViewer } from "@/components/landing/clip-viewer";
-import { FooterSection } from "@/components/layout/footer-section";
 import { HeroSection } from "@/components/landing/hero-section";
 import { LoadingSpinner } from "@/components/landing/loading-spinner";
+import { FooterSection } from "@/components/layout/footer-section";
+import { Boss } from "@/lib/database.types";
+import { supabase } from "@/lib/supabase";
 
 export default function Home() {
   const [bosses, setBosses] = useState<Boss[]>([]);
@@ -34,7 +34,6 @@ export default function Home() {
   useEffect(() => {
     fetchBosses();
 
-    // Set up real-time subscription
     const subscription = supabase
       .channel("bosses_channel")
       .on(
@@ -58,10 +57,8 @@ export default function Home() {
   return (
     <div className="from-background to-muted/5 via-background min-h-screen overflow-hidden relative bg-gradient-to-br">
       <div className="container mx-auto relative px-4 py-8">
-        {/* Hero Section */}
         <HeroSection bosses={bosses} />
 
-        {/* Boss Grid */}
         <div className="grid grid-cols-1 gap-6 mb-16 md:grid-cols-2 md:gap-8 xl:grid-cols-3">
           {bosses.map((boss) => (
             <BossCard
@@ -72,13 +69,11 @@ export default function Home() {
           ))}
         </div>
 
-        {/* Clip Viewer Dialog */}
         <ClipViewer
           selectedClip={selectedClip}
           onClose={() => setSelectedClip(null)}
         />
 
-        {/* Footer */}
         <FooterSection />
       </div>
     </div>

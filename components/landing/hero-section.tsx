@@ -1,11 +1,10 @@
 "use client";
 
-import { Crown, ExternalLink, Skull, Sword, Target, Zap } from "lucide-react";
+import { ExternalLink, Skull, Sword, Target, Zap } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Boss } from "@/lib/database.types";
-
 import { TwitchIcon } from "./twitch-icon";
 
 interface HeroSectionProps {
@@ -45,7 +44,6 @@ export function HeroSection({ bosses }: HeroSectionProps) {
   return (
     <div className="relative mb-12">
       <div className="relative z-10">
-        {/* Compact Header */}
         <div className="mb-8 text-center">
           <div className="inline-flex items-center gap-2 mb-4">
             <Badge
@@ -73,7 +71,6 @@ export function HeroSection({ bosses }: HeroSectionProps) {
             &apos;s epic journey through the treacherous Lands Between
           </p>
 
-          {/* Compact Twitch Buttons */}
           <div className="flex flex-col justify-center items-center gap-3 mb-8 sm:flex-row">
             <Button
               size="lg"
@@ -109,18 +106,14 @@ export function HeroSection({ bosses }: HeroSectionProps) {
           </div>
         </div>
 
-        {/* Floating Stats Display */}
         <div className="relative">
-          {/* Main Progress Circle with Ring */}
           <div className="flex justify-center mb-6">
             <div className="relative">
               <div className="w-32 h-32 relative drop-shadow-lg md:w-40 md:h-40">
-                {/* Progress Ring */}
                 <svg
                   className="-rotate-90 transform w-full h-full"
                   viewBox="0 0 100 100"
                 >
-                  {/* Background Circle */}
                   <circle
                     cx="50"
                     cy="50"
@@ -129,7 +122,6 @@ export function HeroSection({ bosses }: HeroSectionProps) {
                     stroke="hsl(var(--muted))"
                     strokeWidth="4"
                   />
-                  {/* Progress Circle */}
                   <circle
                     cx="50"
                     cy="50"
@@ -144,7 +136,6 @@ export function HeroSection({ bosses }: HeroSectionProps) {
                   />
                 </svg>
 
-                {/* Center Content */}
                 <div className="absolute inset-0 flex justify-center items-center">
                   <div className="text-center">
                     <div className="text-primary text-3xl font-black drop-shadow-sm md:text-4xl">
@@ -162,9 +153,7 @@ export function HeroSection({ bosses }: HeroSectionProps) {
             </div>
           </div>
 
-          {/* Floating Stat Bubbles */}
           <div className="grid grid-cols-3 gap-4">
-            {/* Deaths */}
             <div className="relative">
               <div className="bg-card/80 border-border/50 p-4 text-center rounded-2xl border backdrop-blur-sm transition-all duration-300 hover:bg-card/90 hover:shadow-destructive/10 hover:shadow-lg">
                 <div className="mx-auto w-12 h-12 flex justify-center items-center mb-3 rounded-full border shadow-sm">
@@ -177,7 +166,6 @@ export function HeroSection({ bosses }: HeroSectionProps) {
               </div>
             </div>
 
-            {/* In Progress */}
             <div className="relative">
               <div className="bg-card/80 border-border/50 p-4 text-center rounded-2xl border backdrop-blur-sm transition-all duration-300 hover:bg-card/90 hover:shadow-destructive/10 hover:shadow-lg">
                 <div className="mx-auto w-12 h-12 flex justify-center items-center mb-3 rounded-full border shadow-sm">
@@ -190,7 +178,6 @@ export function HeroSection({ bosses }: HeroSectionProps) {
               </div>
             </div>
 
-            {/* Remaining */}
             <div className="relative">
               <div className="bg-card/80 border-border/50 p-4 text-center rounded-2xl border backdrop-blur-sm transition-all duration-300 hover:bg-card/90 hover:shadow-destructive/10 hover:shadow-lg">
                 <div className="mx-auto w-12 h-12 flex justify-center items-center mb-3 rounded-full border shadow-sm">

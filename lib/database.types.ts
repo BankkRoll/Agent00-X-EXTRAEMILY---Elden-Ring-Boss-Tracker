@@ -73,22 +73,18 @@ export interface Database {
   };
 }
 
-// Convenience types for easier usage
 export type Boss = Database["public"]["Tables"]["bosses"]["Row"];
 export type BossInsert = Database["public"]["Tables"]["bosses"]["Insert"];
 export type BossUpdate = Database["public"]["Tables"]["bosses"]["Update"];
 
-// Boss status enum for type safety - using string literals for now until migration is applied
 export type BossStatus = "Not Started" | "In Progress" | "Completed";
 
-// Extended Boss type with computed properties
 export interface BossWithStats extends Boss {
   duration?: string | null;
   totalDeaths?: number;
   averageLevel?: number;
 }
 
-// Utility types for form handling
 export interface BossFormData {
   name: string;
   status: BossStatus;
@@ -102,7 +98,6 @@ export interface BossFormData {
   order_index: number;
 }
 
-// Progress tracking types
 export interface ProgressStats {
   total: number;
   completed: number;
@@ -114,7 +109,6 @@ export interface ProgressStats {
   averageLevelAgent: number;
 }
 
-// Filter and sort types
 export interface BossFilters {
   status?: BossStatus | "all";
   search?: string;

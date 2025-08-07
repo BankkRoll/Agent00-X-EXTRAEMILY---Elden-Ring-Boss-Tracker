@@ -11,7 +11,6 @@ export default function AdminPage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Check current session
     const checkSession = async () => {
       try {
         const {
@@ -37,7 +36,6 @@ export default function AdminPage() {
 
     checkSession();
 
-    // Listen for auth changes
     const {
       data: { subscription },
     } = supabase.auth.onAuthStateChange(async (event, session) => {

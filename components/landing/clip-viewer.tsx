@@ -14,31 +14,24 @@ interface ClipViewerProps {
 
 export function ClipViewer({ selectedClip, onClose }: ClipViewerProps) {
   const convertTwitchClipToEmbed = (clipUrl: string) => {
-    // Handle different Twitch clip URL formats
     let clipId = "";
 
-    // Remove any query parameters
     const cleanUrl = clipUrl.split("?")[0];
 
-    // Handle different URL patterns
     if (cleanUrl.includes("/clip/")) {
-      // Format: https://www.twitch.tv/username/clip/clipId
       const parts = cleanUrl.split("/clip/");
       if (parts.length > 1) {
         clipId = parts[1];
       }
     } else if (cleanUrl.includes("clips.twitch.tv/")) {
-      // Format: https://clips.twitch.tv/clipId
       const parts = cleanUrl.split("clips.twitch.tv/");
       if (parts.length > 1) {
         clipId = parts[1];
       }
     } else {
-      // Fallback: try to get the last part of the URL
       clipId = cleanUrl.split("/").pop() || "";
     }
 
-    // Clean up the clip ID (remove any remaining path segments)
     clipId = clipId.split("/")[0];
 
     if (!clipId) {

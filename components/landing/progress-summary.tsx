@@ -43,7 +43,6 @@ export function ProgressSummary({ bosses }: ProgressSummaryProps) {
 
   return (
     <div className="mb-20 space-y-8">
-      {/* Main Progress Card */}
       <Card className="from-card/80 to-card/40 bg-gradient-to-br border-0 shadow-2xl backdrop-blur-xl transition-all duration-500 group hover:shadow-3xl">
         <CardHeader className="pb-6">
           <div className="flex justify-between items-center">
@@ -109,7 +108,6 @@ export function ProgressSummary({ bosses }: ProgressSummaryProps) {
         </CardContent>
       </Card>
 
-      {/* Detailed Stats Grid */}
       <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
         <Card className="from-primary/5 to-primary/10 bg-gradient-to-br border-0 shadow-xl backdrop-blur-xl transition-all duration-500 group hover:shadow-2xl">
           <CardHeader className="pb-4">
