@@ -11,7 +11,7 @@
 
 This is a real-time boss tracker for Emily and Agent's Elden Ring marathon. The application provides live updates on boss progress, death counts, levels, and victory clips from their Twitch streams.
 
-**Live Demo:** [Coming Soon]
+**Live Demo:** [https://agent00-x-extraemily.vercel.app](https://agent00-x-extraemily.vercel.app)
 
 ## Tech Stack
 
